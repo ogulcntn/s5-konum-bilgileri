@@ -85,6 +85,19 @@ function cardOlustur(veri) {
   const sehir = document.createElement("p");
   sehir.textContent = `Şehir : ${veri.bölgeAdı}`;
   cardInfo.appendChild(sehir);
+
+  const saat = document.createElement("p");
+  saat.textContent = `Saat dilimi: ${veri.saatdilimi}`;
+  cardInfo.appendChild(saat);
+
+  const para = document.createElement("p");
+  para.textContent = `Para birimi: ${veri.parabirimi}`;
+  cardInfo.appendChild(para);
+
+  const isp = document.createElement("p");
+  isp.textContent = `ISP: ${veri.isp}`;
+  cardInfo.appendChild(isp);
+
 }
 
 // Buradan sonrasını değiştirmeyin, burası yazdığınız kodu sayfaya uyguluyor.
