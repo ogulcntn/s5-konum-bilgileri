@@ -21,6 +21,7 @@ console.log(ipAdresim);
 	ADIM 1: IP kullanarak verileri almak
   getData fonskiyonunda axios kullanarak şu adrese GET sorgusu atacağız: https://apis.code2work.co/ipgeoapi/{ipAdresiniz}
 
+
   Fonksiyon gelen datayı geri dönmeli.
 
   Not: Request sonucu gelen datayı browserda network tabından inceleyin.
@@ -30,7 +31,8 @@ console.log(ipAdresim);
 */
 
 async function getData() {
-  /* kodlar buraya */
+  const data = await axios.get(`https://apis.code2work.co/ipgeoapi/${ipAdresim}`);
+  return  data.data;
 }
 
 /*
