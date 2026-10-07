@@ -68,6 +68,23 @@ function cardOlustur(veri) {
   cardInfo.classList.add("card-info");
   card.appendChild(cardInfo);
 
+  const ip = document.createElement("h3");
+  ip.classList.add("ip");
+  ip.textContent = veri.sorgu;
+  cardInfo.appendChild(ip);
+
+  const ulke = document.createElement("p");
+  ulke.classList.add("ulke");
+  ulke.textContent = `${veri.ülke}(${veri.ülkeKodu})`;
+  cardInfo.appendChild(ulke);
+
+  const enlemBoylam = document.createElement("p");
+  enlemBoylam.textContent = `Enlem : ${veri.enlem} - Boylam : ${veri.boylam}`;
+  cardInfo.appendChild(enlemBoylam);
+
+  const sehir = document.createElement("p");
+  sehir.textContent = `Şehir : ${veri.bölgeAdı}`;
+  cardInfo.appendChild(sehir);
 }
 
 // Buradan sonrasını değiştirmeyin, burası yazdığınız kodu sayfaya uyguluyor.
