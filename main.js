@@ -11,7 +11,6 @@ async function ipAdresimiAl() {
 }
 
 const ipAdresim = await ipAdresimiAl();
-console.log(ipAdresim);
 
 /*
   AMAÇ:
@@ -61,7 +60,7 @@ function cardOlustur(veri) {
   card.classList.add("card");
 
   const img = document.createElement("img");
-  img.src = `https://flaglog.com/codes/standardized-rectangle-120px/${ülkeKodu}.png`;
+  img.src = `https://flaglog.com/codes/standardized-rectangle-120px/${veri.ülkeKodu}.png`;
   card.appendChild(img);
 
   const cardInfo = document.createElement("div");
@@ -75,15 +74,15 @@ function cardOlustur(veri) {
 
   const ulke = document.createElement("p");
   ulke.classList.add("ulke");
-  ulke.textContent = `${veri.ülke}(${veri.ülkeKodu})`;
+  ulke.textContent = `${veri.ülke} (${veri.ülkeKodu})`;
   cardInfo.appendChild(ulke);
 
   const enlemBoylam = document.createElement("p");
-  enlemBoylam.textContent = `Enlem : ${veri.enlem} - Boylam : ${veri.boylam}`;
+  enlemBoylam.textContent = `Enlem: ${veri.enlem} - Boylam: ${veri.boylam}`;
   cardInfo.appendChild(enlemBoylam);
 
   const sehir = document.createElement("p");
-  sehir.textContent = `Şehir : ${veri.bölgeAdı}`;
+  sehir.textContent = `Şehir: ${veri.bölgeAdı}`;
   cardInfo.appendChild(sehir);
 
   const saat = document.createElement("p");
@@ -98,6 +97,7 @@ function cardOlustur(veri) {
   isp.textContent = `ISP: ${veri.isp}`;
   cardInfo.appendChild(isp);
 
+  return card;
 }
 
 // Buradan sonrasını değiştirmeyin, burası yazdığınız kodu sayfaya uyguluyor.
