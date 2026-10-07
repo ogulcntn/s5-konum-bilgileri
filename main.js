@@ -56,8 +56,18 @@ async function getData() {
   </div>
 */
 
-function cardOlustur(/* kodlar buraya */) {
-  /* kodlar buraya */
+function cardOlustur(veri) {
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  const img = document.createElement("img");
+  img.src = `https://flaglog.com/codes/standardized-rectangle-120px/${ülkeKodu}.png`;
+  card.appendChild(img);
+
+  const cardInfo = document.createElement("div");
+  cardInfo.classList.add("card-info");
+  card.appendChild(cardInfo);
+
 }
 
 // Buradan sonrasını değiştirmeyin, burası yazdığınız kodu sayfaya uyguluyor.
